@@ -1,4 +1,4 @@
-# buffered
+# buffered [![Build Status](https://secure.travis-ci.org/mmalecki/buffered.png)](http://travis-ci.org/mmalecki/buffered)
 `buffered` stream is a implementation of a buffered stream, heavily based on
 [@mikeal](https://github.com/mikeal)'s [`morestreams`](https://github.com/mikeal/morestreams).
 
