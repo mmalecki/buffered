@@ -1,0 +1,20 @@
+{
+  "name": "buffered",
+  "author": "Maciej Małecki <maciej.malecki@notimplemented.org>",
+  "version": "0.0.0",
+  "description": "Buffered stream",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmalecki/buffered.git"
+  },
+  "main": "./lib/buffered",
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "devDependencies": {
+    "tap": "0.2.x"
+  },
+  "scripts": {
+    "test": "tap test/*-test.js"
+  }
+}
