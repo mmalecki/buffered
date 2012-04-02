@@ -3,8 +3,6 @@ var http = require('http'),
     test = require('tap').test,
     BufferedStream = require('../').BufferedStream;
 
-var PORT = 9000;
-
 test('BufferedStream/http', function (t) {
   var buffer = new BufferedStream(),
       got = [],
@@ -18,8 +16,11 @@ test('BufferedStream/http', function (t) {
     setTimeout(function () {
       buffer.pipe(res);
     }, 100);
-  }).listen(PORT, function () {
-    var req = http.request({ port: PORT, method: 'POST' }, function (res) {
+  }).listen(0, function () {
+    var req = http.request({
+      port: server.address().port,
+      method: 'POST'
+    }, function (res) {
       res.on('data', function (chunk) {
         got.push(chunk.toString());
       });
